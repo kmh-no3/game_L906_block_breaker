@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.app-header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+    font-size: 1.5rem;
+    color: #4facfe;
+}
+
+.app-header p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header-actions button,
+.header-actions a {
+    padding: 0.5rem 1rem;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.header-actions button:hover,
+.header-actions a:hover {
+    background: #3d8fe0;
+}
+
+.single-game-layout {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.playground {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.game-surface {
+    flex: 1;
+    min-width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameCanvas {
+    border: 2px solid #4facfe;
+    border-radius: 5px;
+    background: #000;
+    display: block;
+}
+
+.info-panel {
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.score-display {
+    margin-bottom: 1.5rem;
+}
+
+.score-display div {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+.score-display span {
+    font-weight: bold;
+    color: #4facfe;
+}
+
+.physics-info {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    background: #e3f2fd;
+    border-radius: 5px;
+    border: 2px solid #4facfe;
+}
+
+.physics-info > div:first-child {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.physics-info div {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.physics-info span {
+    font-weight: bold;
+    color: #4facfe;
+}
+
+.game-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.game-button:hover:not(:disabled) {
+    background: #3d8fe0;
+}
+
+.game-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+dialog h3 {
+    margin-bottom: 1rem;
+    color: #4facfe;
+}
+
+dialog p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+dialog button {
+    padding: 0.5rem 1.5rem;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+dialog button:hover {
+    background: #3d8fe0;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .playground {
+        flex-direction: column;
+    }
+    
+    .game-surface {
+        min-width: 100%;
+    }
+}
+
